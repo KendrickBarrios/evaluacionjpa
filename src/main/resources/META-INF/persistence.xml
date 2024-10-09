@@ -5,7 +5,6 @@
              version="3.0">
   <persistence-unit name="biblioteca">
     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-    <!-- Database connection properties -->
     <properties>
       <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
       <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/biblioteca"/>
@@ -16,3 +15,4 @@
     </properties>
   </persistence-unit>
 </persistence>
+

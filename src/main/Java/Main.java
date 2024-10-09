@@ -3,7 +3,7 @@ import dao.BookDAO;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import models.Book
+import models.Book;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,13 +15,14 @@ public class Main {
         int counter;
         char op = '0';
 
-        while (op != '5') {
+        while (op != '6') {
             System.out.println("Book manager\n");
             System.out.println("1. Add new book");
             System.out.println("2. See current books");
             System.out.println("3. Update book");
             System.out.println("4. Delete book");
-            System.out.println("5. Exit\n");
+            System.out.println("5. Mark a book as available/unavailable\n");
+            System.out.println("6. Exit the program");
             op = sc.next().charAt(0);
 
             switch (op) {
@@ -195,7 +196,7 @@ public class Main {
                     }
                     dao.update(updatedBook2);
                     System.out.println("\nThe book was successfully updated in the database.\n");
-                    break
+                    break;
                 case '6':
                     System.out.println("\nThanks for using the program.\n");
                     break;
