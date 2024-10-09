@@ -38,8 +38,16 @@ public class BookDAO implements IBook {
         em.getTransaction().commit();
     }
 
+    @Override
+    public void markAsUnavailable(Book book) {
+        EntityManager em = EntityManagerAdmin.getInstance();
+        em.getTransaction().begin();
+        em.merge(book);
+        em.getTransaction().commit();
+    }
+
     public Book findById(int id) {
         EntityManager em = EntityManagerAdmin.getInstance();
-        return em.find(Client.class, id);
+        return em.find(Book.class, id);
     }
 }
